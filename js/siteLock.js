@@ -9,10 +9,10 @@ let countdownBoxes;
 
 // Start lock ONLY if not unlocked
 
-// if (!localStorage.getItem("siteUnlocked")) {
-//   createLock();
-//   setInterval(updateLock, 1000);
-// }
+if (!localStorage.getItem("siteUnlocked")) {
+  createLock();
+  setInterval(updateLock, 1000);
+}
 
 function isMoonMinute(diff) {
   return diff <= 60000 && diff > 0; // last 60 seconds
