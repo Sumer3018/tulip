@@ -1,0 +1,250 @@
+/* ================================
+   INNER CONTENT ANIMATIONS
+   ================================ */
+
+/* Index page content */
+.index-wrapper > * {
+  animation: fadeUp 0.9s ease both;
+}
+
+.index-wrapper > *:nth-child(1) { animation-delay: 0.1s; }
+.index-wrapper > *:nth-child(2) { animation-delay: 0.25s; }
+.index-wrapper > *:nth-child(3) { animation-delay: 0.4s; }
+
+/* Her page letter */
+.letter-container {
+  animation: cardPop 0.9s ease both;
+}
+
+/* Video page content */
+.video-page > * {
+  animation: fadeUp 0.9s ease both;
+}
+
+/* ----------------
+   Shared fadeUp
+---------------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   LOVE PAGE — CARD & BEAR
+   ================================ */
+
+/* Love card entrance */
+.love-card {
+  animation: cardPop 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes cardPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Bear soft floating animation */
+.bear-container img {
+  animation: bearFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes bearFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   LOVE PAGE — BUTTON INTERACTION
+   ================================ */
+
+.love-buttons button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.love-buttons button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.love-buttons button:active {
+  transform: scale(0.97);
+}
+
+/* ================================
+   LOVE CELEBRATION — HEARTS
+   ================================ */
+
+.heart-float {
+  position: fixed;
+  bottom: 35vh;
+  width: 28px;
+  opacity: 0;
+  animation: heartRise 3.5s ease-in-out forwards;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes heartRise {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.7);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-120px) scale(1.1);
+  }
+}
+
+/* ================================
+   HEART & TULIP CELEBRATION
+================================ */
+
+.heart-float,
+.tulip-float {
+  position: fixed;
+  bottom: -60px;
+  width: 42px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: floatUp 4.5s ease-in-out forwards;
+}
+
+/* Heart slightly faster */
+.heart-float {
+  animation-duration: 4s;
+}
+
+/* Tulip slower & graceful */
+.tulip-float {
+  animation-duration: 5s;
+  width: 48px;
+}
+
+/* Float animation */
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-110vh) scale(1.2);
+  }
+}
+
+#noBtn:active {
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-3px); }
+  50% { transform: translate(3px); }
+  75% { transform: translate(-2px); }
+  100% { transform: translate(0); }
+}
+
+/* ================================
+   MAGIC LOVE GLOW ✨
+================================ */
+
+.love-card {
+  transition: box-shadow 0.6s ease, transform 0.6s ease;
+}
+
+/* Glow state */
+.love-card.glow {
+  box-shadow:
+    0 0 25px rgba(231, 84, 128, 0.35),
+    0 0 60px rgba(231, 84, 128, 0.25),
+    0 0 100px rgba(231, 84, 128, 0.15);
+  animation: glowPulse 2.8s ease-in-out infinite;
+}
+
+/* Soft pulse animation */
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 20px rgba(231, 84, 128, 0.25),
+      0 0 50px rgba(231, 84, 128, 0.18);
+  }
+  50% {
+    box-shadow:
+      0 0 35px rgba(231, 84, 128, 0.45),
+      0 0 90px rgba(231, 84, 128, 0.3);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(231, 84, 128, 0.25),
+      0 0 50px rgba(231, 84, 128, 0.18);
+  }
+
+}
+
+/* Lock container breathing */
+.lock-content {
+  animation: softBreath 4s ease-in-out infinite;
+}
+
+@keyframes softBreath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.015);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.lock-flower {
+  font-size: 3rem;
+  margin: 1rem 0;
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% { filter: drop-shadow(0 0 0px pink); }
+  50% { filter: drop-shadow(0 0 12px pink); }
+  100% { filter: drop-shadow(0 0 0px pink); }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}

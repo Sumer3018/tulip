@@ -1,0 +1,94 @@
+/* ================================
+   INDEX PAGE — COUNTDOWN HERO
+================================ */
+
+.index-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.hero-title {
+  color: var(--accent-pink);
+}
+
+.hero-subtitle {
+  max-width: 520px;
+  font-size: 1.05rem;
+  margin-bottom: var(--space-md);
+}
+
+/* ================================
+   COUNTDOWN BLOCK
+================================ */
+
+.countdown-block {
+  margin-top: var(--space-md);
+}
+
+.countdown-timer {
+  display: flex;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* EACH BOX */
+.count-card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.4rem;
+  min-width: 90px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NUMBER */
+.count-number {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.1;
+}
+
+/* LABEL */
+.count-label {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-soft);
+}
+
+/* Caption */
+.countdown-caption {
+  font-size: 0.95rem;
+  margin-top: var(--space-sm);
+}
+
+/* CTA BUTTON */
+.start-story {
+  margin-top: var(--space-md);
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-round);
+  border: none;
+  background: var(--accent-pink);
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.start-story:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}

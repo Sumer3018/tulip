@@ -1,0 +1,187 @@
+/* ================================
+   LOVE PAGE LAYOUT FIX
+   ================================ */
+
+.love-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.love-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+  padding: var(--space-lg);
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Headings */
+.love-card h1 {
+  color: var(--accent-pink);
+  margin-bottom: var(--space-xs);
+}
+
+.love-question {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-md);
+}
+
+/* Bear */
+.bear-container img {
+  width: 180px;
+  margin: var(--space-md) auto;
+}
+
+/* Buttons */
+.love-buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.love-buttons button {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-round);
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+#yesBtn {
+  background: var(--accent-pink);
+  color: white;
+}
+
+#noBtn {
+  background: #e0e0e0;
+  position: relative;
+}
+
+/* Love message */
+#love-message {
+  margin-top: var(--space-md);
+  font-family: var(--font-heading);
+  color: var(--accent-pink);
+}
+
+/* Inline nav */
+.love-nav {
+  margin-top: var(--space-lg);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.love-nav a {
+  font-size: 0.85rem;
+  color: var(--accent-pink);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.love-nav a:hover {
+  opacity: 1;
+}
+
+/* ================================
+   LOVE PAGE — RESPONSIVE
+   ================================ */
+
+@media (max-width: 480px) {
+  .love-card {
+    padding: var(--space-md);
+  }
+
+  .bear-container img {
+    width: 140px;
+  }
+
+  .love-buttons {
+    flex-direction: column;
+  }
+
+  .love-buttons button {
+    width: 100%;
+  }
+
+  .love-nav {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}
+
+#love-message {
+  margin-top: var(--space-md);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition-medium);
+}
+
+#love-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.love-big {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--accent-pink);
+}
+
+.love-soft {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+}
+
+.love-line-main {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--accent-pink);
+  margin-top: 1.5rem;
+  animation: fadeUp 0.8s ease both;
+}
+
+.love-line-soft {
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  line-height: 1.8;
+  animation: fadeUp 1.2s ease both;
+}
+
+.story-next {
+  margin-top: var(--space-md);
+  animation: fadeUp 0.8s ease both;
+}
+
+.story-next.hidden {
+  display: none;
+}
+
+.next-btn {
+  background: linear-gradient(135deg, #e75480, #ff9dbb);
+  color: white;
+  border: none;
+  border-radius: var(--radius-round);
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(231, 84, 128, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(231, 84, 128, 0.45);
+}

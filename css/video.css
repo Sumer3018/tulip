@@ -1,0 +1,89 @@
+/* ================================
+   VIDEO PAGE — GIFT EXPERIENCE
+   ================================ */
+
+.video-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+/* Gift card */
+.video-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+  max-width: 720px;
+  width: 100%;
+  animation: cardPop 0.9s ease both;
+}
+
+/* Title */
+.video-card h1 {
+  margin-bottom: var(--space-sm);
+  color: var(--text-dark);
+}
+
+/* Subtitle */
+.video-subtitle {
+  margin-bottom: var(--space-md);
+  font-style: italic;
+  color: var(--text-soft);
+}
+
+/* Video frame */
+.video-frame {
+  padding: var(--space-sm);
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Video itself */
+.video-frame video {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .video-card {
+    padding: var(--space-md);
+  }
+}
+
+.story-btn {
+  margin-top: var(--space-sm);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-round);
+  border: none;
+  background: linear-gradient(135deg, #ff6f91, #ff8fab);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.story-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  opacity: 0.95;
+}
+
+.story-btn:active {
+  transform: scale(0.97);
+}
+
+.story-btn {
+  opacity: 0.9;
+}
+
+.story-btn:hover {
+  opacity: 1;
+}
